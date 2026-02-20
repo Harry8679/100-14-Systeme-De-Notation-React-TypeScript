@@ -10,7 +10,7 @@ import { ReviewForm } from './ReviewForm';
 export const RatingSystem = () => {
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [showReviewForm, setShowReviewForm] = useState(false);
-  const { reviews, addReview, markHelpful, getReviewsByProduct } = useReviews();
+  const { addReview, markHelpful, getReviewsByProduct } = useReviews();
 
   const selectedProduct = selectedProductId
     ? products.find(p => p.id === selectedProductId)
