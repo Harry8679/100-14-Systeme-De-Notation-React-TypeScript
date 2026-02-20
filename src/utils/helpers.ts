@@ -1,3 +1,5 @@
+import type { Review, RatingStats } from '../types';
+
 export const getStarSize = (size: 'sm' | 'md' | 'lg' | 'xl'): string => {
   const sizes = {
     sm: 'w-4 h-4',
@@ -16,7 +18,7 @@ export const formatDate = (date: Date): string => {
   });
 };
 
-export const calculateRatingStats = (reviews: any[]) => {
+export const calculateRatingStats = (reviews: Review[]): RatingStats => {
   const distribution = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
   
   reviews.forEach(review => {
